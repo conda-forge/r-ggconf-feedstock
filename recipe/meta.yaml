@@ -14,9 +14,9 @@ source:
   sha256: 96a8d6e639204bf6d34ecc2ed2a78ac29942af2dd7eca9a0c20ec706b1569d3c
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
-  skip: true  # [win32]
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -43,8 +43,7 @@ about:
   license: GPL-3
   summary: A flexible interface for ggplot2::theme(), potentially saving 50% of your typing.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
